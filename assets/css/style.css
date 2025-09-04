@@ -10,7 +10,7 @@ img { max-width:100%; border-radius:6px; display:block; }
 
 /* ===== Header ===== */
 header {
-  background: linear-gradient(to right, #001f3f, #003366);
+  background: linear-gradient(to right, #001f3f, #004080, #0066cc);
   color:#fff;
   text-align:center;
   padding:1rem;
