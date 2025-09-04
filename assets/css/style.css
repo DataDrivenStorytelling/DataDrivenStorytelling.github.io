@@ -1,32 +1,163 @@
-body { font-family:sans-serif; margin:0; padding:0; background:#fafafa; color:#333; }
-header { text-align:center; padding:1rem; background:#222; color:#fff; }
-nav { margin-bottom:1rem; }
-nav a { color:#fff; text-decoration:none; margin:0 1rem; }
-h1 { margin:0.5rem 0; }
+/* ---------- General Styles ---------- */
+body { 
+  font-family: sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  background: #fafafa; 
+  color: #333; 
+}
 
-/* Featured section */
-.featured-section { display:flex; gap:2rem; max-width:1100px; margin:1rem auto; }
-.left-column { flex:2; }
-.right-column { flex:1; }
+header { 
+  text-align: center; 
+  padding: 1rem; 
+  background: #222; 
+  color: #fff; 
+}
 
-/* Featured snippet styling */
-.featured-snippet { display:block; background:#fff; padding:1rem; border-radius:8px; text-decoration:none; color:#333; }
-.featured-snippet img { width:100%; height:auto; margin-bottom:0.5rem; }
+nav { 
+  margin-bottom: 1rem; 
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
 
-/* Older articles */
-.older-articles { max-width:800px; margin:2rem auto; }
-.article-snippet { display:block; background:#fff; padding:1rem; margin-bottom:1rem; border-radius:6px; text-decoration:none; color:#333; }
-.article-snippet:hover { background:#eee; }
+nav a { 
+  color: #fff; 
+  text-decoration: none; 
+  margin: 0 1rem; 
+  padding: 0.5rem 0; 
+}
 
-/* About me */
-.about-me { background:#fff; padding:1rem; border-radius:8px; }
+nav a:hover { 
+  text-decoration: underline; 
+}
 
-/* Footer */
-footer { text-align:center; padding:1rem; background:#222; color:#fff; margin-top:2rem; }
+h1 { 
+  margin: 0.5rem 0; 
+}
 
-/* Responsive */
-@media(max-width:800px){
-  .featured-section { flex-direction:column; }
+/* ---------- Featured Section (Top Two Columns) ---------- */
+.featured-section {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 1rem auto;
+  align-items: stretch; /* columns equal height */
+}
+
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Equal-height boxes for featured snippet and About Me */
+.left-column .featured-snippet,
+.right-column .about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* fill column height */
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background 0.2s ease;
+}
+
+/* Hover effect */
+.featured-snippet:hover, 
+.about-me:hover {
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Featured snippet image */
+.featured-snippet img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* About Me section */
+.about-me p, .about-me a {
+  margin: 0.5rem 0;
+}
+
+/* ---------- Older Articles ---------- */
+.older-articles { 
+  max-width: 800px; 
+  margin: 2rem auto; 
+}
+
+.article-snippet { 
+  display: block; 
+  background: #fff; 
+  padding: 1rem; 
+  margin-bottom: 1rem; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  color: #333; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+  transition: background 0.2s ease;
+}
+
+.article-snippet:hover { 
+  background: #eee; 
+}
+
+/* ---------- Footer ---------- */
+footer { 
+  text-align: center; 
+  padding: 1rem; 
+  background: #222; 
+  color: #fff; 
+  margin-top: 2rem; 
+}
+
+/* ---------- Images ---------- */
+img { 
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 4px; 
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+
+/* Large desktops: max-width 1200px */
+@media(max-width:1200px){
+  .featured-section { max-width: 900px; }
+}
+
+/* Medium desktops / small laptops: max-width 1024px */
+@media(max-width:1024px){
+  .featured-section { gap:1.5rem; }
+  nav a { margin:0 0.8rem; }
+}
+
+/* Tablets: max-width 900px */
+@media(max-width:900px){
+  .featured-section { 
+    flex-direction: column; 
+  }
   .right-column { order:-1; margin-bottom:1rem; }
-  nav { display:flex; flex-direction:column; align-items:center; }
+  .left-column .featured-snippet,
+  .right-column .about-me {
+    flex: none; /* allow boxes to shrink naturally */
+  }
+  nav { justify-content:center; flex-wrap:wrap; }
+}
+
+/* Small tablets / large phones: max-width 600px */
+@media(max-width:600px){
+  nav { flex-direction: column; align-items:center; }
+  nav a { margin:0.25rem 0; }
+  .featured-section { margin:0.5rem; gap:1rem; }
+  .older-articles { margin:1rem auto; }
+}
+
+/* Extra small phones: max-width 400px */
+@media(max-width:400px){
+  body { font-size:14px; }
+  h1 { font-size:1.5rem; }
+  .featured-snippet p, .about-me p { font-size:0.9rem; }
 }
