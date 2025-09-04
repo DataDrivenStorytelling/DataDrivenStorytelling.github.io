@@ -10,7 +10,7 @@ img { max-width:100%; border-radius:6px; display:block; }
 
 /* ===== Header ===== */
 header {
-  background: linear-gradient(90deg, #001f3f, #003366);
+  background: linear-gradient(to right, #001f3f, #003366);
   color:#fff;
   text-align:center;
   padding:1rem;
@@ -92,7 +92,7 @@ h1 { font-size:2rem; margin:0.5rem 0; }
 
 /* ===== Footer ===== */
 footer {
-  background: linear-gradient(90deg, #001f3f, #003366);
+  background: linear-gradient(to right, #001f3f, #003366);
   color:#fff;
   text-align:center;
   padding:1rem;
@@ -162,7 +162,7 @@ footer {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background: linear-gradient(90deg, #001f3f, #003366);
+  background: linear-gradient(to right, #001f3f, #003366);
   padding:0.5rem 1rem;
 }
 .nav-links a {
@@ -179,7 +179,7 @@ footer {
     display:none;
     flex-direction:column;
     width:100%;
-    background: linear-gradient(90deg, #001f3f, #003366);
+    background: linear-gradient(to right, #001f3f, #003366);
     margin-top:0.5rem;
   }
   .nav-links a { margin:0.5rem 0; }
