@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data-Driven Storytelling</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data-Driven Storytelling</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Blog</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-  <h1>Data-Driven Storytelling</h1>
-</header>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <h1>Data-Driven Storytelling</h1>
+  </header>
 
-<div class="main-container">
+  <main class="main-container">
 
-  <!-- Featured Section -->
-  <div class="featured-section">
-    <div class="left-column">
-      <a href="post1.html" class="clickable-box">
-        <h2>Featured Article</h2>
-        <img src="images/sample1.jpg" alt="Featured image">
-        <p>This is a snippet of the featured article...</p>
+    <!-- Featured + About -->
+    <section class="featured-section">
+      <div class="left-column">
+        <a href="post1.html" class="article-box">
+          <h2>Featured Article</h2>
+          <img src="assets/images/sample1.jpg" alt="Featured image">
+          <p>This is a snippet of the featured article that shows intro text...</p>
+        </a>
+      </div>
+      <div class="right-column">
+        <div class="about-me">
+          <h3>About Me</h3>
+          <p>Short description about yourself, your mission, or your blog focus.</p>
+          <p>
+            <a href="#">LinkedIn</a> |
+            <a href="#">Upwork</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Older Articles -->
+    <section class="older-articles">
+      <a href="post2.html" class="article-box">
+        <h4>Article 1</h4>
+        <p>Short intro for article 1...</p>
       </a>
-    </div>
-    <div class="right-column">
-      <a href="about.html" class="clickable-box about-me">
-        <h3>About Me</h3>
-        <p>Short description about yourself.</p>
-        <p><a href="#">LinkedIn</a> | <a href="#">Upwork</a></p>
+      <a href="post3.html" class="article-box">
+        <h4>Article 2</h4>
+        <p>Short intro for article 2...</p>
       </a>
-    </div>
-  </div>
+      <a href="post4.html" class="article-box">
+        <h4>Article 3</h4>
+        <p>Short intro for article 3...</p>
+      </a>
+    </section>
 
-  <!-- Older Articles -->
-  <div class="older-articles">
-    <a class="clickable-box article-snippet" href="post2.html">
-      <h4>Article 1</h4>
-      <p>Intro for article 1...</p>
-    </a>
-    <a class="clickable-box article-snippet" href="post3.html">
-      <h4>Article 2</h4>
-      <p>Intro for article 2...</p>
-    </a>
-    <a class="clickable-box article-snippet" href="post4.html">
-      <h4>Article 3</h4>
-      <p>Intro for article 3...</p>
-    </a>
-  </div>
+  </main>
 
-</div>
-
-<footer>
-  &copy; 2025 Data-Driven Storytelling
-</footer>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Data-Driven Storytelling
+  </footer>
 
 </body>
 </html>
