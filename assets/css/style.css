@@ -1,155 +1,65 @@
 /* ---------- General Styles ---------- */
-body { 
-  font-family: sans-serif; 
-  margin: 0; 
-  padding: 0; 
-  background: #fafafa; 
-  color: #333; 
-}
+body { font-family:sans-serif; margin:0; padding:0; background:#fafafa; color:#333; }
+header { text-align:center; padding:1rem; background:#222; color:#fff; }
+nav { margin-bottom:1rem; display:flex; justify-content:center; flex-wrap:wrap; }
+nav a { color:#fff; text-decoration:none; margin:0 1rem; padding:0.5rem 0; }
+nav a:hover { text-decoration:underline; }
+h1 { margin:0.5rem 0; }
 
-header { 
-  text-align: center; 
-  padding: 1rem; 
-  background: #222; 
-  color: #fff; 
-}
+/* ---------- Main Container ---------- */
+.main-container { max-width:1100px; margin:0 auto; padding:0 1rem; }
 
-nav { 
-  margin-bottom: 1rem; 
-  display: flex; 
-  justify-content: center; 
-  flex-wrap: wrap; 
-}
-
-nav a { 
-  color: #fff; 
-  text-decoration: none; 
-  margin: 0 1rem; 
-  padding: 0.5rem 0; 
-}
-
-nav a:hover { 
-  text-decoration: underline; 
-}
-
-h1 { 
-  margin: 0.5rem 0; 
-}
-
-/* ---------- Featured Section (Top Two Columns) ---------- */
-.featured-section {
-  display: flex;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 1rem auto;
-  align-items: stretch; /* columns equal height */
-}
-
-.left-column, .right-column {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Equal-height boxes for featured snippet and About Me */
+/* ---------- Featured Section ---------- */
+.featured-section { display:flex; gap:2rem; align-items:stretch; margin:1rem 0; }
+.left-column, .right-column { display:flex; flex-direction:column; }
 .left-column .featured-snippet,
 .right-column .about-me {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1; /* fill column height */
-  padding: 1rem;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  flex:1;
+  padding:1rem;
+  border-radius:8px;
+  background:#fff;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
   transition: background 0.2s ease;
 }
-
-/* Hover effect */
-.featured-snippet:hover, 
-.about-me:hover {
-  background: #f0f0f0;
-  cursor: pointer;
-}
+.featured-snippet:hover, .about-me:hover { background:#f0f0f0; cursor:pointer; }
 
 /* Featured snippet image */
-.featured-snippet img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-/* About Me section */
-.about-me p, .about-me a {
-  margin: 0.5rem 0;
-}
+.featured-snippet img { width:100%; height:auto; margin-bottom:0.5rem; }
+.about-me p, .about-me a { margin:0.5rem 0; }
 
 /* ---------- Older Articles ---------- */
-.older-articles { 
-  max-width: 800px; 
-  margin: 2rem auto; 
-}
-
-.article-snippet { 
-  display: block; 
-  background: #fff; 
-  padding: 1rem; 
-  margin-bottom: 1rem; 
-  border-radius: 6px; 
-  text-decoration: none; 
-  color: #333; 
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
-  transition: background 0.2s ease;
-}
-
-.article-snippet:hover { 
-  background: #eee; 
-}
+.older-articles { display:flex; flex-direction:column; gap:1rem; margin:2rem 0; }
+.article-snippet { display:block; background:#fff; padding:1rem; border-radius:6px; text-decoration:none; color:#333; box-shadow:0 1px 3px rgba(0,0,0,0.05); transition:background 0.2s ease; width:100%; box-sizing:border-box; }
+.article-snippet:hover { background:#eee; }
 
 /* ---------- Footer ---------- */
-footer { 
-  text-align: center; 
-  padding: 1rem; 
-  background: #222; 
-  color: #fff; 
-  margin-top: 2rem; 
-}
+footer { text-align:center; padding:1rem; background:#222; color:#fff; margin-top:2rem; }
 
 /* ---------- Images ---------- */
-img { 
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 4px; 
-}
+img { max-width:100%; height:auto; border-radius:4px; }
 
 /* ---------- Responsive Breakpoints ---------- */
 
 /* Large desktops: max-width 1200px */
-@media(max-width:1200px){
-  .featured-section { max-width: 900px; }
-}
+@media(max-width:1200px){ .main-container { max-width:900px; } }
 
 /* Medium desktops / small laptops: max-width 1024px */
-@media(max-width:1024px){
-  .featured-section { gap:1.5rem; }
-  nav a { margin:0 0.8rem; }
-}
+@media(max-width:1024px){ .featured-section { gap:1.5rem; } nav a { margin:0 0.8rem; } }
 
 /* Tablets: max-width 900px */
 @media(max-width:900px){
-  .featured-section { 
-    flex-direction: column; 
-  }
+  .featured-section { flex-direction:column; }
   .right-column { order:-1; margin-bottom:1rem; }
-  .left-column .featured-snippet,
-  .right-column .about-me {
-    flex: none; /* allow boxes to shrink naturally */
-  }
+  .left-column .featured-snippet, .right-column .about-me { flex:none; }
   nav { justify-content:center; flex-wrap:wrap; }
 }
 
 /* Small tablets / large phones: max-width 600px */
 @media(max-width:600px){
-  nav { flex-direction: column; align-items:center; }
+  nav { flex-direction:column; align-items:center; }
   nav a { margin:0.25rem 0; }
   .featured-section { margin:0.5rem; gap:1rem; }
   .older-articles { margin:1rem auto; }
