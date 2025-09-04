@@ -128,12 +128,14 @@ footer {
 /* ===== Post Pages ===== */
 .post-page {
   background:#fff;
-  padding:2rem;
+  padding:2rem;           /* buffer around content */
   border-radius:8px;
   box-shadow:0 2px 5px rgba(0,0,0,0.1);
   margin:2rem auto;
-  max-width:800px;
+  max-width:900px;        /* limits width on large screens */
 }
+
+/* Meta & text spacing */
 .post-page h2 { margin-bottom:0.5rem; }
 .post-page .post-meta {
   color:#666;
@@ -145,3 +147,12 @@ footer {
   border-radius:6px;
 }
 .post-page p { margin-bottom:1rem; }
+
+/* Responsive buffering */
+@media(max-width:700px){
+  .post-page { padding:1.5rem; max-width:100%; }
+}
+
+@media(max-width:500px){
+  .post-page { padding:1rem; }
+}
