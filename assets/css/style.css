@@ -125,6 +125,15 @@ footer {
   h1 { font-size:1.25rem; }
 }
 
+@media (min-width: 700px) {
+  .older-articles .article-box img {
+    max-width: 400px;   /* shrink image */
+    float: left;
+    margin: 0 1rem 0.5rem 0;
+  }
+}
+
+
 /* ===== Post Pages ===== */
 .post-page {
   background:#fff;
