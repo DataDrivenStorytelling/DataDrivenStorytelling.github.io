@@ -126,32 +126,26 @@ footer {
 }
 
 @media (min-width: 900px) {
-  /* Horizontal layout for older articles */
   .older-articles .article-box {
     display: flex;
     flex-direction: row;
-    gap: 1rem;           /* space between image and text */
-    align-items: flex-start;
-    flex-wrap: wrap;      /* allows text to wrap under image if too long */
+    gap: 1rem;
+    align-items: flex-start;  /* already correct */
+    flex-wrap: wrap;
+    text-align: left;          /* force text inside to align left */
   }
 
-  /* Image styling */
   .older-articles .article-box img {
-    max-width: 470px;    /* adjust as needed */
-    width: auto;
-    height: auto;
-    flex-shrink: 0;      /* prevents image from shrinking */
-    border-radius: 6px;
-    margin-bottom: 0.5rem; /* spacing under image for wrap */
+    max-width: 470px;
+    flex-shrink: 0;
+    margin: 0 1rem 0.5rem 0;   /* ensure spacing to the right */
+    display: block;            /* force image to behave as block, not inline */
   }
 
-  /* Text content takes remaining space */
   .older-articles .article-box h4,
   .older-articles .article-box p {
     flex: 1;
   }
-}
-
 
 }
 
