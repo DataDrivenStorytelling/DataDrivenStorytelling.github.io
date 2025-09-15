@@ -127,7 +127,7 @@ footer {
 
 @media (min-width: 700px) {
   .older-articles .article-box img {
-    max-width: 400px;   /* shrink image */
+    max-width: 500px;   /* shrink image */
     float: left;
     margin: 0 1rem 0.5rem 0;
   }
