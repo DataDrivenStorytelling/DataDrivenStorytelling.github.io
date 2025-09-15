@@ -126,10 +126,12 @@ footer {
 }
 
 @media (min-width: 900px) {
+  .older-articles .article-box { display: block; }
   .older-articles .article-box img {
-    max-width: 470px;   /* shrink image */
     float: left;
+    max-width: 470px;
     margin: 0 1rem 0.5rem 0;
+    display: block;
   }
 }
 
