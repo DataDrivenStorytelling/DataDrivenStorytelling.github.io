@@ -126,14 +126,12 @@ footer {
 }
 
 @media (min-width: 900px) {
-  /* Older articles stacked vertically */
   .older-articles {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-  /* Each older article becomes horizontal flex */
   .older-articles .article-box {
     display: flex;
     flex-direction: row;
@@ -142,7 +140,6 @@ footer {
     text-align: left;
   }
 
-  /* Image styling */
   .older-articles .article-box img {
     max-width: 470px;
     flex-shrink: 0;
@@ -150,6 +147,12 @@ footer {
     display: block;
     object-fit: cover;
   }
+
+  .older-articles .article-box h4,
+  .older-articles .article-box p {
+    flex: 1;
+  }
+}
 
   /* Text takes remaining space */
   .older-articles .article-box h4,
